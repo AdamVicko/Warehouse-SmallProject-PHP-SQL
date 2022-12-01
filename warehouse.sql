@@ -46,12 +46,19 @@ create table proizvod(
     model varchar(50),
     dostupan boolean,
     datum_kupovine date,
-    datum_isporuke date,
     skladiste int
 );
 
 create table isporuka(
     sifra int not null primary key auto_increment,
+    datum_isporuke date,
+    pacijent int,
+    proizvod int
+);
+
+create table prikup(
+    sifra int not null primary key auto_increment,
+    datum_prikupa date,
     pacijent int,
     proizvod int
 );
@@ -67,12 +74,15 @@ alter table zaposlenik add foreign key (osoba) references osoba(sifra);
 alter table pacijent add foreign key (osoba) references osoba (sifra);
 alter table zaposlenik add foreign key (direktor) references zaposlenik (sifra);
 alter table zaposlenik add foreign key (skladiste) references skladiste(sifra);
-alter table isporuka add foreign key (pacijent) references pacijent (sifra);
 
 
+#PROIZVOD
 alter table stanje add foreign key (proizvod) references proizvod (sifra);
 alter table proizvod add foreign key (skladiste) references skladiste (sifra);
 alter table isporuka add foreign key (proizvod) references proizvod (sifra);
+alter table isporuka add foreign key (pacijent) references pacijent (sifra);
+alter table prikup add foreign key (pacijent) references pacijent (sifra);
+alter table prikup add foreign key (proizvod) references proizvod (sifra);
 
 
 
