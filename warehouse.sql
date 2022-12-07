@@ -6,7 +6,7 @@ use edunovapp26;
 
 # TABLICE
 
-create table osoba (
+create table pacijent (
     sifra int not null primary key auto_increment,
     ime varchar(30) not null,
     prezime varchar(50) not null,
@@ -14,28 +14,6 @@ create table osoba (
     datum_rodenja date,
     adresa text(50),
     oib char(11)
-);
-
-create table zaposlenik(
-    sifra int not null primary key auto_increment,
-    osoba int,
-    skladiste int,
-    direktor int
-);
-
-#Pacijent osoba kojoj je izdano pomagalo
-create table pacijent(
-    sifra int not null primary key auto_increment,
-    osoba int
-);  
-
-
-#Lokacije skladistenja robe
-create table skladiste(
-    sifra int not null primary key auto_increment,
-    naziv varchar(50) not null,
-    adresa varchar(100) not null,
-    postanski_broj int not null
 );
 
 create table proizvod(
@@ -67,19 +45,10 @@ create table stanje(
     sifra int not null primary key auto_increment,
     kolicina_kom int,
     proizvod int,
-    skladiste int
 );
-
-#OSOBA
-alter table zaposlenik add foreign key (osoba) references osoba(sifra);
-alter table pacijent add foreign key (osoba) references osoba (sifra);
-alter table zaposlenik add foreign key (direktor) references zaposlenik (sifra);
-alter table zaposlenik add foreign key (skladiste) references skladiste(sifra);
-
 
 #PROIZVOD
 alter table stanje add foreign key (proizvod) references proizvod (sifra);
-alter table stanje add foreign key (skladiste) references skladiste (sifra);
 alter table isporuka add foreign key (proizvod) references proizvod (sifra);
 alter table isporuka add foreign key (pacijent) references pacijent (sifra);
 alter table prikup add foreign key (pacijent) references pacijent (sifra);
@@ -92,7 +61,7 @@ alter table prikup add foreign key (proizvod) references proizvod (sifra);
 
 
 
-insert into osoba (sifra,ime,prezime,telefon,datum_rodenja,adresa,oib)
+insert into pacijent (sifra,ime,prezime,telefon,datum_rodenja,adresa,oib)
 values
 (null,'Ivo','Andrić','097 6444789','1985.03.26','Ivana Gundulica 658','59452136897'),
 (null,'Bubo','Basić','097 6444789','1965.03.26','Ivaundulica 588','59452136197'),
@@ -105,24 +74,6 @@ values
 (null,'Semso','Poplava','097 6444789','1989.03.26','vana Guca 558','59457136897'),
 (null,'Ivo','Mali','097 6444789','1990.03.26','Iva Guica 8','59452136896');
 
-insert into skladiste (sifra,naziv,adresa,postanski_broj)
-values 
-(null,'Klisa','Vukovarska55, Klisa','21570'),
-(null,'Radnja','Franje Krezme 22, Osijek','31000');
-
-
-insert into zaposlenik (sifra,osoba,skladiste,direktor)
-values
-(null,1,1,null),
-(null,2,2,null),
-(null,3,1,null),
-(null,4,2,4),
-(null,5,1,null),
-(null,6,2,null),
-(null,7,1,null),
-(null,8,2,null),
-(null,9,1,null),
-(null,10,2,null);
 
 insert into proizvod(sifra,serijski_kod,radni_sat,naziv,proizvodac,
                     model,datum_kupovine)    
