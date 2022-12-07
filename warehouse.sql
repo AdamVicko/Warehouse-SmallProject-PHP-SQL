@@ -1,4 +1,4 @@
-
+# C:\Users\Adam\Desktop\Repositories\Warehouse-SmallProject-PHP-SQL-DBEAVER\warehouse.sql
 
 drop database if exists edunovapp26;
 create database edunovapp26 default charset utf8;
@@ -42,25 +42,23 @@ create table proizvod(
     sifra int not null primary key auto_increment,
     serijski_kod varchar(50),
     radni_sat decimal(18,2),
-    naziv varchar(50),
+    naziv varchar(50) not null,
     proizvodac varchar(50),
     model varchar(50),
-    dostupan boolean,
     komentar varchar(100),
-    datum_kupovine date,
-    skladiste int
+    datum_kupovine date
 );
 
 create table isporuka(
     sifra int not null primary key auto_increment,
-    datum_isporuke date,
+    datum_isporuke date not null,
     pacijent int,
     proizvod int
 );
 
 create table prikup(
     sifra int not null primary key auto_increment,
-    datum_prikupa date,
+    datum_prikupa date not null,
     pacijent int,
     proizvod int
 );
@@ -68,7 +66,8 @@ create table prikup(
 create table stanje(
     sifra int not null primary key auto_increment,
     kolicina_kom int,
-    proizvod int
+    proizvod int,
+    skladiste int
 );
 
 #OSOBA
@@ -80,7 +79,7 @@ alter table zaposlenik add foreign key (skladiste) references skladiste(sifra);
 
 #PROIZVOD
 alter table stanje add foreign key (proizvod) references proizvod (sifra);
-alter table proizvod add foreign key (skladiste) references skladiste (sifra);
+alter table stanje add foreign key (skladiste) references skladiste (sifra);
 alter table isporuka add foreign key (proizvod) references proizvod (sifra);
 alter table isporuka add foreign key (pacijent) references pacijent (sifra);
 alter table prikup add foreign key (pacijent) references pacijent (sifra);
@@ -90,6 +89,7 @@ alter table prikup add foreign key (proizvod) references proizvod (sifra);
 
 
 #--------------INSERT
+
 
 
 insert into osoba (sifra,ime,prezime,telefon,datum_rodenja,adresa,oib)
@@ -105,12 +105,11 @@ values
 (null,'Semso','Poplava','097 6444789','1989.03.26','vana Guca 558','59457136897'),
 (null,'Ivo','Mali','097 6444789','1990.03.26','Iva Guica 8','59452136896');
 
-
-
 insert into skladiste (sifra,naziv,adresa,postanski_broj)
 values 
 (null,'Klisa','Vukovarska55, Klisa','21570'),
 (null,'Radnja','Franje Krezme 22, Osijek','31000');
+
 
 insert into zaposlenik (sifra,osoba,skladiste,direktor)
 values
@@ -125,26 +124,53 @@ values
 (null,9,1,null),
 (null,10,2,null);
 
-
 insert into proizvod(sifra,serijski_kod,radni_sat,naziv,proizvodac,
-                    model,dostupan,datum_kupovine,skladiste)    
+                    model,datum_kupovine)    
 values
-(null,'BK533456343','124,5','Koncentrator_Kisika','Devilbiss','5L','true','2022.03.14',1),
-(null,'BK345674343','14,5','Koncentrator_Kisika','Devilbiss','5L','true','2022.02.19',1),
-(null,'BK345746343','12','Koncentrator_Kisika','Devilbiss','5L','true','2022.01.29',1),
-(null,'BK3464566343','925','Koncentrator_Kisika','Devilbiss','5L','true','2022.07.21',1),
-(null,'BK3456343','5874','Koncentrator_Kisika','Devilbiss','5L','true','2022.04.10',1),
-(null,'BK5353456343','0','Koncentrator_Kisika','Devilbiss','5L','true','2022.11.02',1),
-(null,'BK30673456343','3655','Koncentrator_Kisika','Devilbiss','5L','true','2022.01.10',1),
-(null,'BK3456304003','14526','Koncentrator_Kisika','Devilbiss','5L','true','2022.04.13',1),
-(null,'BK34563943','124','Koncentrator_Kisika','Devilbiss','5L','true','2022.2.22',1),
-(null,'BK53456343','124,5','Koncentrator_Kisika','Devilbiss','5L','true','2022.03.14',2),
-(null,'BK674343','14,5','Koncentrator_Kisika','Devilbiss','5L','true','2022.02.19',2),
-(null,'GK746343','12','Koncentrator_Kisika','Devilbiss','5L','true','2022.01.29',2),
-(null,'GK64566343','925','Koncentrator_Kisika','Devilbiss','5L','true','2022.07.21',2),
-(null,'GK3456343','5874','Koncentrator_Kisika','Devilbiss','5L','true','2022.04.10',2),
-(null,'GK6343','0','Koncentrator_Kisika','Devilbiss','5L','true','2022.11.02',2),
-(null,'GK3056343','3655','Koncentrator_Kisika','Devilbiss','5L','true','2022.01.10',2),
-(null,'UZ56304003','14526','Koncentrator_Kisika','Devilbiss','5L','true','2022.04.13',2),
-(null,'UZ363943','124','Koncentrator_Kisika','Devilbiss','5L','true','2022.2.22',2)
+(null,'BK533456343','124,5','Koncentrator_Kisika','Devilbiss','5L','2022.03.14'),
+(null,'BK345674343','14,5','Koncentrator_Kisika','Devilbiss','5L','2022.02.19'),
+(null,'BK345746343','12','Koncentrator_Kisika','Devilbiss','5L','2022.01.29'),
+(null,'BK3464566343','925','Koncentrator_Kisika','Devilbiss','5L','2022.07.21'),
+(null,'BK3456343','5874','Koncentrator_Kisika','Devilbiss','5L','2022.04.10'),
+(null,'BK5353456343','0','Koncentrator_Kisika','Devilbiss','5L','2022.11.02'),
+(null,'BK30673456343','3655','Koncentrator_Kisika','Devilbiss','5L','2022.01.10'),
+(null,'BK3456304003','14526','Koncentrator_Kisika','Devilbiss','5L','2022.04.13'),
+(null,'BK34563943','124','Koncentrator_Kisika','Devilbiss','5L','2022.2.22'),
+(null,'BK53456343','124,5','Koncentrator_Kisika','Devilbiss','5L','2022.03.14'),
+(null,'BK674343','14,5','Koncentrator_Kisika','Devilbiss','5L','2022.02.19'),
+(null,'GK746343','12','Koncentrator_Kisika','Devilbiss','5L','2022.01.29'),
+(null,'GK64566343','925','Koncentrator_Kisika','Devilbiss','5L','2022.07.21'),
+(null,'GK3456343','5874','Koncentrator_Kisika','Devilbiss','5L','2022.04.10'),
+(null,'GK6343','0','Koncentrator_Kisika','Devilbiss','5L','2022.11.02'),
+(null,'GK3056343','3655','Koncentrator_Kisika','Devilbiss','5L','2022.01.10'),
+(null,'UZ56304003','14526','Koncentrator_Kisika','Devilbiss','5L','2022.04.13'),
+(null,'UZ363943','124','Koncentrator_Kisika','Devilbiss','5L','2022.2.22')
 ;
+
+
+insert into stanje (sifra,proizvod,skladiste)
+values
+(null,1,1),
+(null,2,1),
+(null,3,1),
+(null,4,1),
+(null,5,1),
+(null,6,1),
+(null,7,1),
+(null,8,1),
+(null,9,1),
+(null,10,1),
+(null,11,2),
+(null,12,2),
+(null,13,2),
+(null,14,2),
+(null,15,2),
+(null,16,2),
+(null,17,2),
+(null,18,2)
+;
+
+
+
+
+
