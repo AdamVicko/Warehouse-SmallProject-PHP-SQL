@@ -44,7 +44,7 @@ create table prikup(
 create table stanje(
     sifra int not null primary key auto_increment,
     kolicina_kom int,
-    proizvod int,
+    proizvod int
 );
 
 #PROIZVOD
@@ -99,7 +99,7 @@ values
 ;
 
 
-insert into stanje (sifra,proizvod,skladiste)
+insert into stanje (sifra,proizvod,kolicina_kom)
 values
 (null,1,1),
 (null,2,1),
@@ -111,14 +111,14 @@ values
 (null,8,1),
 (null,9,1),
 (null,10,1),
-(null,11,2),
-(null,12,2),
-(null,13,2),
-(null,14,2),
-(null,15,2),
-(null,16,2),
-(null,17,2),
-(null,18,2)
+(null,11,1),
+(null,12,1),
+(null,13,1),
+(null,14,1),
+(null,15,1),
+(null,16,1),
+(null,17,1),
+(null,18,1)
 ;
 
 
