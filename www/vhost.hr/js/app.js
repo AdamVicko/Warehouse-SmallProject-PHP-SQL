@@ -1,4 +1,5 @@
 
+
 //Pozivanje pop-up modala i sakrivanje svega "iza njega"
 document.querySelector(`#registration`).addEventListener(`click`, () => {
     document.querySelector(`.custom-modal`).style.display = `block`
