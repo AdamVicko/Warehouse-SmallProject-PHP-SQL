@@ -3,8 +3,12 @@
 /* INDEX PAGE LOGIN/REGISTER */
 
 body {
+    background-color: black;
+    color: white;
+    /*
     background-image: url('img/bcg.jpg');
     background-size: cover ; /*smanji ili povecaj sliku kako bi popunila zadani element*/
+    
 }
 
 h1 {
