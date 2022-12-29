@@ -9,6 +9,8 @@ body{
     padding: 50px; /*sve cetri strane 50px*/
     box-shadow: rgba(0,0,0,0.8) 0 0 0 10000px inset; /*crnom bojom smo zasjenili body element radi boljeg isticanja */
                 /*rgba koristimo ukoliko zelimo providnu boju */
+    max-width: 650px;
+    margin: auto;
 }
 
 button {
