@@ -4,18 +4,7 @@
     box-sizing: border-box; /* svi rubovi padding ulazi u ukupni width elementa (odnosno on se smanjuje kako bi usao u zadani width)*/
 }
 
-body{
-    font-family: sans-serif;
-    padding: 50px; /*sve cetri strane 50px*/
-    box-shadow: rgba(0,0,0,0.8) 0 0 0 10000px inset; /*crnom bojom smo zasjenili body element radi boljeg isticanja */
-                /*rgba koristimo ukoliko zelimo providnu boju */
-    max-width: 650px;
-    margin: auto;
-}
-
 button {
     cursor: pointer; /*na hoover postaje pointer svi gumbi */
 }
-
-
 

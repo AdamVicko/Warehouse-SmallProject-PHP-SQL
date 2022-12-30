@@ -16,7 +16,7 @@ create table pacijent (
     oib char(11)
 );
 
-create table proizvod(
+create table koncentrator_kisika(
     sifra int not null primary key auto_increment,
     serijski_kod varchar(50),
     radni_sat decimal(18,2),
@@ -31,28 +31,28 @@ create table isporuka(
     sifra int not null primary key auto_increment,
     datum_isporuke date not null,
     pacijent int,
-    proizvod int
+    koncentrator_kisika int
 );
 
 create table prikup(
     sifra int not null primary key auto_increment,
     datum_prikupa date not null,
     pacijent int,
-    proizvod int
+    koncentrator_kisika int
 );
 
 create table stanje(
     sifra int not null primary key auto_increment,
     kolicina_kom int,
-    proizvod int
+    koncentrator_kisika int
 );
 
 #PROIZVOD
-alter table stanje add foreign key (proizvod) references proizvod (sifra);
-alter table isporuka add foreign key (proizvod) references proizvod (sifra);
+alter table stanje add foreign key (koncentrator_kisika) references koncentrator_kisika (sifra);
+alter table isporuka add foreign key (koncentrator_kisika) references koncentrator_kisika (sifra);
 alter table isporuka add foreign key (pacijent) references pacijent (sifra);
 alter table prikup add foreign key (pacijent) references pacijent (sifra);
-alter table prikup add foreign key (proizvod) references proizvod (sifra);
+alter table prikup add foreign key (koncentrator_kisika) references koncentrator_kisika (sifra);
 
 
 
@@ -75,7 +75,7 @@ values
 (null,'Ivo','Mali','097 6444789','1990.03.26','Iva Guica 8','59452136896');
 
 
-insert into proizvod(sifra,serijski_kod,radni_sat,naziv,proizvodac,
+insert into koncentrator_kisika(sifra,serijski_kod,radni_sat,naziv,proizvodac,
                     model,datum_kupovine)    
 values
 (null,'BK533456343','124,5','Koncentrator_Kisika','Devilbiss','5L','2022.03.14'),
@@ -99,7 +99,7 @@ values
 ;
 
 
-insert into stanje (sifra,proizvod,kolicina_kom)
+insert into stanje (sifra,koncentrator_kisika,kolicina_kom)
 values
 (null,1,1),
 (null,2,1),
