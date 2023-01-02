@@ -1,3 +1,5 @@
+
+
 * {  /*Micemo marginu i border radi lakseg snalazenja znaci sve je na nuli trenutno */
     margin: 0;
     padding: 0;
@@ -6,5 +8,21 @@
 
 button {
     cursor: pointer; /*na hoover postaje pointer svi gumbi */
+}
+
+
+/*Footer*/
+footer{
+    background-color:#333333;
+    color: grey;
+}
+
+#fot a{
+    color: white !important;
+}
+
+#fot a:hover{
+    font-weight: 700;
+    color: orange !important;
 }
 

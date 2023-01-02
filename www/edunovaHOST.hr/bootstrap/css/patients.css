@@ -1,0 +1,16 @@
+/*Navbar*/
+.navbar a:hover{
+    font-weight: 700;
+}
+
+
+/*Date*/
+.cdate{
+    margin-right: 10px;
+    border: solid black;
+    border-width: 0.2px;
+    padding: 3px;
+    font-size: 20px;
+    font-weight: bold;
+    text-align: center;
+}
