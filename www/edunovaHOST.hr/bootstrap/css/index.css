@@ -32,10 +32,6 @@ h2 {
     padding: 50px; /*sve cetri strane*/
 }
 
-button {
-    cursor: pointer; /*na hoover postaje pointer svi gumbi */
-}
-
 form div {
     padding: 15px 0; /*top i bottom padding na 15px, lijevo i desno 0*/
 }
