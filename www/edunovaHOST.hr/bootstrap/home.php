@@ -160,15 +160,54 @@
                         </tr>
                     </tbody>
                 </table>
+                
+                <div>
+                    <button id="add_patient_popup_btn">Add Patient</button>
+                </div>
 
+                <div class="custom2-modal">
 
-                <div class="container kartice">
-                    <div class="card border-secondary mb-3 input-group">
-                        <div class="card-header">Important notes</div>
-                        <div class="card-body">
-                        <textarea class="form-control" aria-label="With textarea"></textarea>
-                        </div>
-                    </div>
+                    <button id="close_custom2_modal">X</button>
+
+                        <form id="add_patient">
+                            <div>
+                                <label>Name and Surname:</label>
+                                <input type="text" name="register_patient_name" id="register_patient_name" placeholder="Name and Surname">
+                            </div>
+
+                            <div>
+                                <label>Adress:</label>
+                                <input type="text" name="register_patient_adress" id="register_patient_adress" placeholder="Adress">
+                            </div>
+
+                            <div>
+                                <label>Phone:</label>
+                                <input type="text" name="register_patient_phone" id="register_patient_phone" placeholder="09...">
+                            </div>
+
+                            <div>
+                                <label>Serial Number:</label>
+                                <input type="text" name="register_patient_serial_number" id="register_patient_serial_number" placeholder="OXYGEN">
+                            </div>
+
+                            <div>
+                                <label>Date of delivery:</label>
+                                <input type="date" name="delivery_date" id="delivery_date" placeholder="01.01.2000">
+                            </div>
+
+                            <div>
+                                <label>Date of collection:</label>
+                                <input type="date" name="collection_date" id="collection_date" placeholder="01.01.2000">
+                            </div>
+
+                            <div>
+                                <label>Comment:</label>
+                                <input type="text" name="comment" id="comment" placeholder="Comment">
+                            </div>
+
+                            <button id="confirm_patient">Confirm Patient</button>
+                        </form>
+                    
                 </div>
 
             </div>
@@ -188,9 +227,8 @@
     <!--Footer-->
     <?php include_once 'footer.php'; ?>
 
-
-
     <?php include_once 'scripts.php'; ?>
+    <script src="js/home.js"></script>
 </body>
 
 </html>
