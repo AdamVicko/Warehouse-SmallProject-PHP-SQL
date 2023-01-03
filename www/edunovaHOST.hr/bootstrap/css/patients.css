@@ -15,6 +15,28 @@
     text-align: center;
 }
 
+   /*-----------------------BODY----------------------*/
+#maindio{
+    margin-top: 100px;
+}
+/*Table*/
+
+.table{
+    margin:10px 0 50px 0;
+}
+
+.table a{
+    text-decoration: none;
+}
+
+/*Vanjski dio bodia odnosno prostor za obsvijesti
+    i iskakanje alertova ili potrebe za citanjem maila itd */
+.vanjski{
+    margin: 60px 10px 60px 10px;
+}
+
+
+
 /*Footer*/
 footer{
     background-color:#333333;

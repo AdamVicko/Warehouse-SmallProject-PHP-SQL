@@ -59,10 +59,137 @@
             
         </nav>
 
-    <!--MAIN DIO -->
+
+<!--MAIN DIO -->
+
+<div class="container-fluid" id="maindio">
+
+<div class="row">
+
+    <!--Lijevi vanjski-->
+    <div class="col vanjski">
+            
+            <h5 class="text-center">Daily chores</h5>
+
+            <div class="card border-secondary input-group mb-3">
+                <div class="card-header">Patients Services</div>
+                <div class="card-body input-group-text">
+                    <input class="form-check-input mt-0" type="checkbox" value="" aria-label="Checkbox for following text input">
+                    <textarea class="form-control" aria-label="Text input with checkbox"></textarea>
+                </div>
+                <div class="card-body input-group-text">
+                    <input class="form-check-input mt-0" type="checkbox" value="" aria-label="Checkbox for following text input">
+                    <textarea class="form-control" aria-label="Text input with checkbox"></textarea>
+                </div>
+                <div class="card-body input-group-text">
+                    <input class="form-check-input mt-0" type="checkbox" value="" aria-label="Checkbox for following text input">
+                    <textarea class="form-control" aria-label="Text input with checkbox"></textarea>
+                </div>
+                <div class="card-body input-group-text">
+                    <input class="form-check-input mt-0" type="checkbox" value="" aria-label="Checkbox for following text input">
+                    <textarea class="form-control" aria-label="Text input with checkbox"></textarea>
+                </div>
+            </div>
+    
+    </div>
+
+    <!--Cijeli glavni dio sajta UNUTARNJI -->
+    <div class="col-8 border-end border-start">
+
+
+        <h3 class="tablename">Patients</h3>
+        <table class="table table-hover">
+            <thead>
+                <tr>
+                    <th scope="col">#</th>
+                    <th scope="col">Name and Surname</th>
+                    <th scope="col">Adress</th>
+                    <th scope="col">Phone</th>
+                    <th scope="col">Serial Number</th>
+                    <th scope="col">Date of Delivery</th>
+                    <th scope="col">Date of Collection</th>
+                    <th scope="col">Comment</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <th scope="row">1</th>
+                    <td>Mark Viduka</td>
+                    <td>Nahida Kulenovića 45b</td>
+                    <td>031/585 698</td>
+                    <td><a href="oxygenconcentrator.php">L556879945</a></td>
+                    <td>05.11.2021</td>
+                    <td></td>
+                    <td><textarea class="form-control">Running 24/7 ,needs check up every 6 months gggggggggggggggggggggggggg</textarea></td>
+                </tr>
+                <tr>
+                    <th scope="row">2</th>
+                    <td>Mark Viduka</td>
+                    <td>Nahida Kulenovića 45b</td>
+                    <td>031/585 698</td>
+                    <td><a href="oxygenconcentrator.php">L556879945</a></td>
+                    <td>05.11.2021</td>
+                    <td></td>
+                    <td><textarea class="form-control">Running 24/7 ,needs check up every 6 months gggggggggggggggggggggggggg</textarea></td>
+                </tr>
+                <tr>
+                    <th scope="row">3</th>
+                    <td>Mark Viduka</td>
+                    <td>Nahida Kulenovića 45b</td>
+                    <td>031/585 698</td>
+                    <td><a href="oxygenconcentrator.php">L556879945</a></td>
+                    <td>05.11.2021</td>
+                    <td></td>
+                    <td><textarea class="form-control">Running 24/7 ,needs check up every 6 months gggggggggggggggggggggggggg</textarea></td>
+                </tr>
+                <tr>
+                    <th scope="row">4</th>
+                    <td>Mark Viduka</td>
+                    <td>Nahida Kulenovića 45b</td>
+                    <td>031/585 698</td>
+                    <td><a href="oxygenconcentrator.php">L556879945</a></td>
+                    <td>05.11.2021</td>
+                    <td></td>
+                    <td><textarea class="form-control">Running 24/7 ,needs check up every 6 months gggggggggggggggggggggggggggggggggggggggggggggggg</textarea></td>
+                </tr>
+                <tr>
+                    <th scope="row">5</th>
+                    <td>Mark Viduka</td>
+                    <td>Nahida Kulenovića 45b</td>
+                    <td>031/585 698</td>
+                    <td><a href="oxygenconcentrator.php">L556879945</a></td>
+                    <td>05.11.2021</td>
+                    <td></td>
+                    <td><textarea class="form-control">Running 24/7 ,needs check up every 6 months gggggggggggggggggggggggggg</textarea></td>
+                </tr>
+            </tbody>
+        </table>
+
+
+        <div class="container kartice">
+            <div class="card border-secondary mb-3 input-group">
+                <div class="card-header">Important notes</div>
+                <div class="card-body">
+                <textarea class="form-control" aria-label="With textarea"></textarea>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <!--Desni vanjski-->
+    <div class="col vanjski">
+
+    <!--Alerts for due date Product Service needed-->
+
+    </div>
+    
+</div>
 
 
 
+
+</div>
 
 
 
