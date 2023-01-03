@@ -3,7 +3,7 @@
 /* INDEX PAGE LOGIN/REGISTER */
 
 body {
-    background-color: #261c1c;
+    background-color: #333333;
     color: white;
     /*
     background-image: url('img/bcg.jpg');
@@ -76,7 +76,7 @@ no-acc-register p {
 
 /*REGISTER MODAL*/
 
-.custom-modal {
+.custom-modal {      
     display: none;
     background-color: #261c1c;
     box-shadow: rgba(255,255,255,0.8) 0 0 1000px 1000px; /*zasjencaj sve okolo s bijelim*/
@@ -104,3 +104,17 @@ no-acc-register p {
     right: 30px;
     top: 30px;
 }
+
+
+
+/*Footer*/
+footer{
+    background-color:#333333;
+    color: white !important;
+}
+
+#fot a:hover{
+    font-weight: 700;
+    color: orange !important;
+}
+

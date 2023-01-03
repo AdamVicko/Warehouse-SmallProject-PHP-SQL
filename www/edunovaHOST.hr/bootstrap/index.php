@@ -39,6 +39,7 @@
 
     <div class="no-acc-register">
         <button id="registration">Register account</button>
+        <hr>
     </div>
 
 
@@ -87,9 +88,13 @@
                 </div>
             </div>
         </form>
-
+        
 </div>
     
+    <!--Footer-->
+    <?php include_once 'footer.php'; ?>
+
+
     <?php include_once 'scripts.php'; ?>
     <script src="js/index.js"></script>
 

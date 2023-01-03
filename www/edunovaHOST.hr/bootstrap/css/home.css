@@ -37,3 +37,14 @@
 }
 
 
+/*Footer*/
+footer{
+    background-color:#333333;
+    color: white !important;
+}
+
+#fot a:hover{
+    font-weight: 700;
+    color: orange !important;
+}
+
