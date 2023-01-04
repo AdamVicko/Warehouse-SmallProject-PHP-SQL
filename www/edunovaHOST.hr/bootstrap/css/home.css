@@ -52,11 +52,17 @@ form div button {
     padding: 10px 30px;
     font-size: 18px;
 }
+
+#add_patient_popup_btn{
+    border: none;
+    background-color: white;
+}
+
 /*ADD PATIENT MODAL*/
 
 .custom2-modal {      
     display: none;
-    background-color: #261c1c;
+    background-color: #333333;
     box-shadow: rgba(255,255,255,0.8) 0 0 1000px 1000px; /*zasjencaj sve okolo s bijelim*/
     max-width: 650px;
     margin: auto;
@@ -81,6 +87,10 @@ form div button {
     position: absolute;
     right: 30px;
     top: 30px;
+}
+
+#confirm_patient{
+    margin-top: 30px;
 }
 
 /*Vanjski dio bodia odnosno prostor za obsvijesti
