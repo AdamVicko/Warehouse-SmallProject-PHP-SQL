@@ -3,6 +3,7 @@
 <head>
 	<?php include_once 'head.php'; ?>
     <link rel="stylesheet" href="css/patients.css">
+    <link rel="stylesheet" href="css/addpatientmodal.css">
 </head>
 
 <body>
@@ -12,7 +13,7 @@
     <nav class="navbar fixed-top navbar-expand-lg navbar-dark bg-secondary">
             <div class="container-fluid">
                 <a class="navbar-brand" href="home.php">
-                    <img src="/images/W_Logo.png" width="30" height="30" class="d-inline-block align-top"
+                    <img src="images/WLogo.png" width="30" height="30" class="d-inline-block align-top"
                         alt="VicWare Logo">
                         VicWare
                 </a>
@@ -31,7 +32,9 @@
                                 Patients
                             </a>
                             <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                                <li><button class="dropdown-item" id="add_patient_popup_btn" >Add Patient</button></li>
+                                <li><a class="dropdown-item" href="patients.php">Patients List</a></li>
+                                    <hr>
+                                <li><a class="dropdown-item button" id="addpatientpopupbtn" >Add Patient</a></li>
                             </ul>
                         </li>
 
@@ -51,51 +54,7 @@
                             </ul>
                         </li>
 
-                        <!--POP UP MODAL-->
-                        <div class="custom2-modal">
-
-                            <button id="close_custom2_modal">X</button>
-
-                            <form id="add_patient">
-                                <div>
-                                    <label>Name and Surname:</label>
-                                    <input type="text" name="register_patient_name" id="register_patient_name" placeholder="Name and Surname">
-                                </div>
-
-                                <div>
-                                    <label>Adress:</label>
-                                    <input type="text" name="register_patient_adress" id="register_patient_adress" placeholder="Adress">
-                                </div>
-
-                                <div>
-                                    <label>Phone:</label>
-                                    <input type="text" name="register_patient_phone" id="register_patient_phone" placeholder="09...">
-                                </div>
-
-                                <div>
-                                    <label>Serial Number:</label>
-                                    <input type="text" name="register_patient_serial_number" id="register_patient_serial_number" placeholder="OXYGEN">
-                                </div>
-
-                                <div>
-                                    <label>Date of delivery:</label>
-                                    <input type="date" name="delivery_date" id="delivery_date" placeholder="01.01.2000">
-                                </div>
-
-                                <div>
-                                    <label>Date of collection:</label>
-                                    <input type="date" name="collection_date" id="collection_date" placeholder="01.01.2000">
-                                </div>
-
-                                <div>
-                                    <label>Comment:</label>
-                                    <textarea class="form-control"></textarea>
-                                </div>
-
-                            </form>
-
-                            <button id="confirm_patient">Confirm Patient</button>
-                        </div>
+                        <?php include_once 'addpatientmodal.php' ?>
 
                     </ul>
                 </div>

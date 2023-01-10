@@ -5,7 +5,7 @@
 
     <?php include_once 'head.php'; ?>
     <link rel="stylesheet" href="css/home.css">
-    <link rel="stylesheet" href="css/add_patient_modal.css">
+    <link rel="stylesheet" href="css/addpatientmodal.css">
 </head>
 
 <body>
@@ -15,7 +15,7 @@
     <nav class="navbar fixed-top navbar-expand-lg navbar-dark bg-secondary">
         <div class="container-fluid">
             <a class="navbar-brand" href="home.php">
-                <img src="/images/W_Logo.png" width="30" height="30" class="d-inline-block align-top"
+                <img src="images/WLogo.png" width="30" height="30" class="d-inline-block align-top"
                     alt="VicWare Logo">
                     VicWare
             </a>
@@ -29,16 +29,14 @@
                         <a class="nav-link active" aria-current="page" href="home.php">Home</a>
                     </li>
 
-                    <li class="nav-item">
-                        <a class="nav-link" href="#"></a>
-                    </li>
-
                     <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                             Patients
                         </a>
                         <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                            <li><button class="dropdown-item" id="add_patient_popup_btn" >Add Patient</button></li>
+                            <li><a class="dropdown-item" href="patients.php">Patients List</a></li>
+                            <hr>
+                            <li><a class="dropdown-item" id="addpatientpopupbtn" >Add Patient</a></li>
                         </ul>
                     </li>
 
@@ -58,7 +56,7 @@
                         </ul>
                     </li>
 
-                    <?php include_once 'add_patient_modal.php' ?>
+                    <?php include_once 'addpatientmodal.php' ?>
 
                 </ul>
             </div>

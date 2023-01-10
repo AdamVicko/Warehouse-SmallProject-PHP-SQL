@@ -8,7 +8,7 @@
 <body>
 
     <div class="logo">
-        <img src="img/W_logo.png">
+        <img src="images\WLogo.png">
     </div>
 
     <h1>WareVic</h1>
@@ -21,12 +21,12 @@
             
             <div>
                 <label>Email:</label>
-                <input type="email" name="email" id="login_email" placeholder="@">
+                <input type="email" name="email" id="loginemail" placeholder="@">
             </div>
 
             <div>
                 <label>Password:</label>
-                <input type="password" name="lozinka" id="login_lozinka" placeholder="*********">
+                <input type="password" name="lozinka" id="loginlozinka" placeholder="*********">
             </div>
 
             <div>
@@ -54,17 +54,17 @@
 
             <div>
                 <label>User Name: *</label>
-                <input type="text" name="register_user_name" id="register_user_name" placeholder="User Name">
+                <input type="text" name="registerusername" id="registerusername" placeholder="User Name">
             </div>
 
             <div>
                 <label>User Surname: *</label>
-                <input type="text" name="register_user_surname" id="register_user_surname" placeholder="User Surname">
+                <input type="text" name="registerusersurname" id="registerusersurname" placeholder="User Surname">
             </div>
 
             <div>
                 <label>Email adress: *</label>
-                <input type="text" name="register_email" id="register_email" placeholder="@">
+                <input type="text" name="registeremail" id="registeremail" placeholder="@">
             </div>
 
             <div>
@@ -83,7 +83,7 @@
                         <button>Register Account</button>
                     </div>
                     <div class="col-6">
-                        <button id="DEMO" >DEMO ENTER</button> <!--napravi da prebaci na homepage-->
+                        <a class="button" id="DEMO" href="home.php" >DEMO ENTER</a> <!--napravi da prebaci na homepage-->
                     </div>
                 </div>
             </div>
