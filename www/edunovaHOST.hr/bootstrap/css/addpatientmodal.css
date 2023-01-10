@@ -20,9 +20,9 @@ form div button {
     font-size: 18px;
 }
 
-#add_patient_popup_btn{
+#addpatientpopupbtn{
     border: none;
-    background-color: white;
+    cursor: pointer; /*Zbog toga sto nije button nego a u navbar dropdownu*/
 }
 
 /*ADD PATIENT MODAL*/
@@ -42,7 +42,7 @@ form div button {
     width: 100%;
 }
 
-.custom2-modal button#close_custom2_modal{
+.custom2-modal button#closecustom2modal{
     height: 10px;
     width: 20px;
     color: white;
@@ -56,6 +56,6 @@ form div button {
     top: 30px;
 }
 
-#confirm_patient{
+#confirmpatient{
     margin-top: 30px;
 }
