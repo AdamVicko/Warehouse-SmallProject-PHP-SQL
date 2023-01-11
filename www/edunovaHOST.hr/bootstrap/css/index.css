@@ -6,7 +6,7 @@ body {
     background-color: #333333;
     color: white;
     /*
-    background-image: url('img/bcg.jpg');
+    background-image: url('/images/bcg.jpg') !important;
     background-size: cover ; /*smanji ili povecaj sliku kako bi popunila zadani element*/
     
 }

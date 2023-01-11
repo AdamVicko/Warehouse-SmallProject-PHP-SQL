@@ -1,15 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
 
     <?php include_once 'head.php'; ?>
-    <link rel="stylesheet" href="css/home.css">
     <link rel="stylesheet" href="css/addpatientmodal.css">
+
 </head>
-
 <body>
-
     <!--NAVBAR-->
 
     <nav class="navbar fixed-top navbar-expand-lg navbar-dark bg-secondary">
@@ -26,7 +23,7 @@
                 <ul class="navbar-nav">
 
                     <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="home.php">Home</a>
+                        <a class="nav-link" aria-current="page" href="home.php">Home</a>
                     </li>
 
                     <li class="nav-item dropdown">
@@ -41,7 +38,7 @@
                     </li>
 
                     <li class="nav-item">
-                        <a class="nav-link" href="warehousestatus.php">Warehouse status</a>
+                        <a class="nav-link active" href="warehousestatus.php">Warehouse status</a>
                     </li>
 
                     <li class="nav-item dropdown">
@@ -81,7 +78,7 @@
             <!--Lijevi vanjski-->
             <div class="col vanjski">
                     
-                    <h5 class="text-center">Daily chores</h5>
+                    <h5 class="text-center">Daily updates</h5>
 
                     <div class="card border-secondary input-group mb-3">
                         <div class="card-header">Daily delivery</div>
@@ -103,25 +100,6 @@
                         </div>
                     </div>
             
-                    <div class="card border-secondary input-group mb-3">
-                        <div class="card-header">Daily collection</div>
-                        <div class="card-body input-group-text">
-                            <input class="form-check-input mt-0" type="checkbox" value="" aria-label="Checkbox for following text input">
-                            <textarea class="form-control" aria-label="Text input with checkbox"></textarea>
-                        </div>
-                        <div class="card-body input-group-text">
-                            <input class="form-check-input mt-0" type="checkbox" value="" aria-label="Checkbox for following text input">
-                            <textarea class="form-control" aria-label="Text input with checkbox"></textarea>
-                        </div>
-                        <div class="card-body input-group-text">
-                            <input class="form-check-input mt-0" type="checkbox" value="" aria-label="Checkbox for following text input">
-                            <textarea class="form-control" aria-label="Text input with checkbox"></textarea>
-                        </div>
-                        <div class="card-body input-group-text">
-                            <input class="form-check-input mt-0" type="checkbox" value="" aria-label="Checkbox for following text input">
-                            <textarea class="form-control" aria-label="Text input with checkbox"></textarea>
-                        </div>
-                    </div>
             </div>
 
             <!--Cijeli glavni dio sajta UNUTARNJI -->
@@ -192,6 +170,6 @@
 
     <?php include_once 'scripts.php'; ?>
     <script src="js/app.js"></script>
-</body>
 
+</body>
 </html>

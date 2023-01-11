@@ -39,7 +39,7 @@
                         </li>
 
                         <li class="nav-item">
-                            <a class="nav-link" href="#">Warehouse status</a>
+                            <a class="nav-link" href="warehousestatus.php">Warehouse status</a>
                         </li>
 
                         <li class="nav-item dropdown">
